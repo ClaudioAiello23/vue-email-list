@@ -11,52 +11,71 @@ RESET RULES
 
 /* 
 ******************
+VARIABLES
+****************** 
+*/
+:root{
+    --main_color: yellow;
+}
+
+/* 
+******************
 MAIN RULES
 ****************** 
 */
 
 body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(36, 36, 36);
-}
+    background-color: rgb(0, 0, 0);
+} 
 
-main{
+.main_container{
+    height: 100vh;
     background-image: url('../img/6fda2-chiocciola.jpg');
     background-size: 30%;
-    border: 4px solid black;
-    border-radius: 50%;
-    max-width: 62.5rem;
+    max-width: 87.5rem;
     margin: 0 auto;
+    border: 0.625rem solid var(--main_color);
+    position:relative;
+    opacity: 0.4;
 }
 
-#box_container{
-    padding: 6.25rem;
+.box_container{
+    padding: 5rem;
     text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
 }
 
 main h1{
-    font-size: 2.5rem;
-    margin-bottom: 1.875rem;
-    color: blue;
+    font-size: 3.125rem;
+    margin-bottom: .625rem;
+    color: var(--main_color);
 }
 
 main ul li{
     list-style: none;
     font-weight: bold;
-    font-size: 1.25rem;
-    margin-bottom: 1.25rem;
+    font-size: 1.5625rem;
+    margin-bottom: 1.5625rem;
     text-decoration: underline;
     cursor: pointer;
+    color: rgb(161, 231, 20);
 }
 
-.scale:hover{
-    transform: scale(1.5);
-    color: yellow;
-
+.hover:hover{
+    color: var(--main_color);
 }
+
+.letter{
+    font-size: 2.5rem;
+    color: var(--main_color);
+}
+
+
 
