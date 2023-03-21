@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Email List</title>
     <!-- Chiamata alla libreria Axios - esecuzione chiamate asincrone -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- Collegamento file CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div id="app">prova</div>
+    <div id="app">
+        <ul>
+            <li> {{ contacts.email }}</li>
+        </ul>
+    </div>
     
 
 

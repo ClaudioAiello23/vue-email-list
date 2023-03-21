@@ -7,18 +7,29 @@ const { createApp } = Vue
 
 /*Inizializzare un'istanza dell'applicazione Vue, invocando 
 la funzione createApp*/
-  createApp({
+createApp({
     data() {
-      return {
-        email: [],
-      }
+        return {
+            contacts: {
+                email: 'clod2303@gmail.com',
+            }
+        }
     },
+
     methods: {
-        
 
-    }
 
-  }).mount('#app')
+    },
+
+    beforeMount() {
+        axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+            .then((response) => {
+                console.log(response.data);
+                this.contacts.email = response.data.response
+                console.log(response.data.response)
+            });
+    },
+}).mount('#app')
 
 //    axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
 //   .then(function (response){
