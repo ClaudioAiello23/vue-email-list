@@ -12,14 +12,17 @@
 </head>
 
 <body>
-    <div id="app">
-        <ul>
-            <li v-for="mail in email"> {{ mail }}</li>
-        </ul>
-    </div>
-    
-
-
+        <!-- Inizio sezione con utilizzo Vue JS (id="app") -->
+    <main id="app"> 
+        <div id="box_container">
+            <h1>{{ title }}</h1>
+            <ul>
+                <li v-for="mail in email" class="scale"> {{ mail }}</li>
+            </ul>
+        </div>
+    </main>
+        <!-- Fine sezione con utilizzo Vue JS (id="app") -->
+  
     <!-- Collegamento CDN Vue JS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- /Collegamento CDN Vue JS -->

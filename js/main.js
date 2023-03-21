@@ -10,6 +10,7 @@ la funzione createApp*/
 createApp({
     data() {
         return {
+            title: 'CREATE RANDOM MAIL',
             email: []
         }
     },
